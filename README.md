@@ -1,2 +1,2 @@
-# BiKonfig - Kerékpár webshop és konfigurációs weboldal
+# BringaBirodalom - Kerékpár webshop és konfigurációs weboldal
 
