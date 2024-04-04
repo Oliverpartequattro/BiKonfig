@@ -1,2 +1,2 @@
-# BiKonfig
-Billentyuzet VAGY Bicikli konfigurator?????
+# BiKonfig - Kerékpár webshop és konfigurációs weboldal
+
