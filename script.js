@@ -1,11 +1,14 @@
 import data from './bikeData.js'
 import { Bike } from './item.js'
 
-let shopButton = document.getElementById("toCart")
-let bikes = Bike.loadData(data)
 let cartCount = document.getElementById("count")
+let bikes = Bike.loadData(data)
 let cart = []
-let count = 0
+
+if (localStorage.getItem('cart')) {
+    cart = JSON.parse(localStorage.getItem('cart'));
+    updateCartCount();
+}
 
 document.getElementById('bikeContainer').addEventListener('click', function(event) {
     if (event.target.classList.contains('toCart')) {
@@ -16,11 +19,18 @@ document.getElementById('bikeContainer').addEventListener('click', function(even
 function addToCart(button) {
     bikes.forEach(element => {
         if(element.id == button.value){
-            cart.push(element)
-            count = cart.length
-            cartCount.innerHTML = count
+            if(cart.some(item => item.id === element.id)){
+                alert("Ez már benne van a kosárban!")
+            }
+            else{
+                cart.push(element)
+                updateCartCount();
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
         }
     });
-    console.log(cart)
-    console.log(count)
+}
+
+function updateCartCount() {
+    cartCount.innerHTML = cart.length;
 }
