@@ -125,3 +125,31 @@ body{
     transform: scale(1.1);
     font-size: 110%;
 }
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: dropdownFadeIn 2.5s ease forwards; 
+}
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-menu select {
+    margin-bottom: 10px;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
