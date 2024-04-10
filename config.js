@@ -12,7 +12,7 @@ container.appendChild(canvas);
 function putOnCanvas(event){
     var base_image = new Image();
     base_image.onload = function() {
-        context.clearRect(0, 0, canvas.width, canvas.height); // Clear existing content
+        context.clearRect(0, 0, canvas.width, canvas.height); 
         context.drawImage(base_image, 100, 100);
     };
     base_image.src = event.target.value;
