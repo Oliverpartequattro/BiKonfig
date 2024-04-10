@@ -1,8 +1,10 @@
 import data from './bikeData.js';
 import { Bike } from './item.js';
-import { initializeCartCount } from './count.js';
-import { initializeAddToCart } from './addToCart.js';
+import { cartCountFunction } from './count.js';
+import { addToCartFunction } from './addToCart.js';
 
-let updateCartCount = initializeCartCount("count");
-let bikes = Bike.loadData(data);
-initializeAddToCart(bikes, "count", updateCartCount);
+document.addEventListener("DOMContentLoaded", function() {
+    let updateCartCount = cartCountFunction("count");
+    let bikes = Bike.loadData(data);
+    addToCartFunction(bikes, "count", updateCartCount);
+});
