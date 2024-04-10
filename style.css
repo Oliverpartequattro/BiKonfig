@@ -199,3 +199,7 @@ body{
         text-shadow: 0 0 20px rgba(224, 60, 49, 1);
     }
 }
+
+.side-menu p{
+    margin-top: 100px;
+}
