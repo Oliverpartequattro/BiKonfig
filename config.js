@@ -1,6 +1,7 @@
 var canvas = document.createElement('canvas');
+context = canvas.getContext('2d');
 let dropdown = document.getElementById("dropdownMenu")
-dropdown.addEventListener("onchange", putOnCanvas)
+dropdown.addEventListener("change", putOnCanvas)
 
 canvas.width = 800; 
 canvas.height = 600; 
@@ -9,5 +10,11 @@ var container = document.getElementById('canvasContainer');
 container.appendChild(canvas);
 
 function putOnCanvas(event){
-console.log(event.target.value)
+    var base_image = new Image();
+    base_image.onload = function() {
+        context.clearRect(0, 0, canvas.width, canvas.height); // Clear existing content
+        context.drawImage(base_image, 100, 100);
+    };
+    base_image.src = event.target.value;
+    console.log("jesz");
 }
