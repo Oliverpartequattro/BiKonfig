@@ -46,7 +46,6 @@ export function addToCartFunction(bikesData) {
     
             if (localStorage.getItem('cart')) {
                 cart = JSON.parse(localStorage.getItem('cart'));
-                console.log(cart)
             }
             else{
                 cart = []
