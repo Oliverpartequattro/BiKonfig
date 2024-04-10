@@ -1,4 +1,4 @@
-export function addToCartFunction(bikesData, cartElementId) {
+export function addToCartFunction(bikesData) {
     let bikes = bikesData;
     let cart = []
     
@@ -17,7 +17,8 @@ export function addToCartFunction(bikesData, cartElementId) {
                 if(cart.some(item => item.id === element.id)){
                     alert("Ez már benne van a kosárban!")
                     cart = []
-                    localStorage.setItem('cart', JSON.stringify(cart)); //EZ KIURITI
+                    localStorage.setItem('cart', JSON.stringify(cart)); 
+                    updateCartCount() //EZ KIURITI
                 }
                 else{
                     cart.push(element)
@@ -50,7 +51,13 @@ export function addToCartFunction(bikesData, cartElementId) {
             else{
                 cart = []
             }
-                cartCount.innerHTML = cart.length;
+            if(cart.length == 0){
+                cartCount.innerHTML = "A kosara üres."
+            }
+            else{
+                cartCount.innerHTML = `A kosárban ${cart.length} bicikli van.`
+            }
+                
         }
     }
 }
