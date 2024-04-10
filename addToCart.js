@@ -1,11 +1,11 @@
-export function addToCartFunction(bikesData, cartElementId, updateCartCount) {
+export function addToCartFunction(bikesData, cartElementId) {
     let bikes = bikesData;
     let cart = []
-
+    
     if (localStorage.getItem('cart')) {
         cart = JSON.parse(localStorage.getItem('cart'));
-        updateCartCount();
         console.log(cart)
+        updateCartCount();
     }
     else{
         cart = []
@@ -16,12 +16,13 @@ export function addToCartFunction(bikesData, cartElementId, updateCartCount) {
             if(element.id == button.value){
                 if(cart.some(item => item.id === element.id)){
                     alert("Ez már benne van a kosárban!")
-                    // cart = []
-                    // localStorage.setItem('cart', JSON.stringify(cart)); EZ KIURITI
+                    cart = []
+                    localStorage.setItem('cart', JSON.stringify(cart)); //EZ KIURITI
                 }
                 else{
                     cart.push(element)
                     localStorage.setItem('cart', JSON.stringify(cart));
+                    console.log(cart)
                     updateCartCount(); 
                 }
             }
@@ -36,4 +37,22 @@ export function addToCartFunction(bikesData, cartElementId, updateCartCount) {
             }
         });
     }
+
+    function updateCartCount (){
+        let cartCount = document.getElementById("count");
+        if(cartCount){
+            let cart = []
+    
+            if (localStorage.getItem('cart')) {
+                cart = JSON.parse(localStorage.getItem('cart'));
+                console.log(cart)
+            }
+            else{
+                cart = []
+            }
+                cartCount.innerHTML = cart.length;
+        }
+    }
 }
+
+
