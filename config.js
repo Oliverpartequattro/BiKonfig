@@ -3,17 +3,17 @@ import configData from './configData.js';
 let configItems = ConfigItem.loadData(configData);
 console.log(configItems)
 
-var canvas = document.createElement('canvas');
+let canvas = document.createElement('canvas');
 let context = canvas.getContext('2d');
 let dropdown = document.querySelectorAll("[id='dropdownMenu']");
 dropdown.forEach(element => {
     element.addEventListener('change', putOnCanvas);
 });
 
-canvas.width = 800; 
+canvas.width = 850; 
 canvas.height = 600; 
 canvas.style.border = '1px solid black';
-var container = document.getElementById('canvasContainer');
+let container = document.getElementById('canvasContainer');
 container.appendChild(canvas);
 
 function putOnCanvas(event){
@@ -22,47 +22,50 @@ function putOnCanvas(event){
             console.log(item)
             console.log(item.id)
             if(item.id.startsWith(0)){
-                var base_image = new Image();
-                base_image.src = item.path;
-                base_image.onload = function() {
+                let image = new Image();
+                image.src = item.path;
+                image.onload = function() {
                     context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(base_image, 100, 100);
+                    context.drawImage(image, 100, 100);
                 };
                 console.log("VÁZ");
             }
             else if(item.id.startsWith(1)){
-                var base_image = new Image();
-                base_image.src = item.path;
-                base_image.onload = function() {
+                let image = new Image();
+                let width = 250;
+                let height = 250;
+                image.src = item.path;
+                image.onload = function() {
                     context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(base_image, 100, 100);
+                    context.drawImage(image, 100, 350, width, height);
+                    context.drawImage(image, 500, 350, width, height);
                 };
                 console.log("KERÉK");
             }
             else if(item.id.startsWith(2)){
-                var base_image = new Image();
-                base_image.src = item.path;
-                base_image.onload = function() {
+                let image = new Image();
+                image.src = item.path;
+                image.onload = function() {
                     context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(base_image, 100, 100);
+                    context.drawImage(image, 100, 100);
                 };
                 console.log("HAJTÁS");
             }
             else if(item.id.startsWith(3)){
-                var base_image = new Image();
-                base_image.src = item.path;
-                base_image.onload = function() {
+                let image = new Image();
+                image.src = item.path;
+                image.onload = function() {
                     context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(base_image, 100, 100);
+                    context.drawImage(image, 100, 100);
                 };
                 console.log("KORMÁNY");
             }
             else if(item.id.startsWith(4)){
-                var base_image = new Image();
-                base_image.src = item.path;
-                base_image.onload = function() {
+                let image = new Image();
+                image.src = item.path;
+                image.onload = function() {
                     context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(base_image, 100, 100);
+                    context.drawImage(image, 100, 100);
                 };
                 console.log("NYEREG");
             }
