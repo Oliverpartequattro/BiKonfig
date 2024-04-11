@@ -6,7 +6,7 @@ class ConfigItem{ //név;ár;kategória;verseny;path;id
         this.category = splittedData[2]
         this.race = splittedData[3]
         this.path = splittedData[4]
-        this.id = Number(splittedData[5])
+        this.id = splittedData[5]
     }
 
     static loadData(data){

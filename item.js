@@ -5,7 +5,8 @@ class Bike{
         this.year = splittedData[1]
         this.price = Number(splittedData[2])
         this.condition = splittedData[3]
-        this.id = Number(splittedData[4])
+        this.path = splittedData[4]
+        this.id = Number(splittedData[5])
     }
 
     static loadData(data){
