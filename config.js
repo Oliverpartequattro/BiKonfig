@@ -59,30 +59,29 @@ function putOnCanvas(event){
 }
 
 function buildBike(frameImg, wheelImg, groupsetImg, handlebarImg, saddleImg) {
-    if (wheelImg) {
-        wheelImg.onload = function() {
-            context.drawImage(wheelImg, 100, 350, 250, 250);
-            context.drawImage(wheelImg, 500, 350, 250, 250);
+    let loadedImages = 0;
+    let totalImages = [frameImg, wheelImg, groupsetImg, handlebarImg, saddleImg].filter(img => img); 
+    totalImages.forEach(img => {
+        img.onload = function() {
+            loadedImages++;
+            if (loadedImages === totalImages.length) {
+                if (wheelImg) {
+                    context.drawImage(wheelImg, 100, 350, 250, 250);
+                    context.drawImage(wheelImg, 500, 350, 250, 250 );
+                }
+                if (groupsetImg) {
+                    context.drawImage(groupsetImg, -80, 190);
+                }
+                if (frameImg) {
+                    context.drawImage(frameImg, 125, 120);
+                }
+                if (handlebarImg) {
+                    context.drawImage(handlebarImg, 463, 130);
+                }
+                if (saddleImg) {
+                    context.drawImage(saddleImg, 188, 110);
+                }
+            }
         };
-    }
-    if (frameImg) {
-        frameImg.onload = function() {
-            context.drawImage(frameImg, 125, 120);
-        };
-    }
-    if (groupsetImg) {
-        groupsetImg.onload = function() {
-            context.drawImage(groupsetImg, -80, 190);
-        };
-    }
-    if (handlebarImg) {
-        handlebarImg.onload = function() {
-            context.drawImage(handlebarImg, 463, 130);
-        };
-    }
-    if (saddleImg) {
-        saddleImg.onload = function() {
-            context.drawImage(saddleImg, 188, 110);
-        };
-    }
+    });
 }
