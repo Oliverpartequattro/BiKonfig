@@ -1,0 +1,25 @@
+.cartItems hr{
+    margin-top: 20px;
+    color: rgb(255, 109, 109);
+}
+.cartItems div img{
+    height: 200px;
+    width: 200px;
+}
+.aboutBicicle{
+    padding-left: 20px;
+    list-style-type: none;  
+}
+.CartDeletProduct{
+    border: 0;
+    color: red;
+}
+.priceli{
+    padding-bottom: 50px;
+}
+.priceli2{
+    padding-bottom: 20px;
+}
+.PriceAll{
+    text-align: right;
+}
