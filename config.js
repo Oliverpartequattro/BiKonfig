@@ -12,7 +12,6 @@ dropdown.forEach(element => {
 
 canvas.width = 850; 
 canvas.height = 600; 
-canvas.style.border = '1px solid black';
 let container = document.getElementById('canvasContainer');
 container.appendChild(canvas);
 
