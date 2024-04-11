@@ -25,8 +25,8 @@ function putOnCanvas(event){
                 let image = new Image();
                 image.src = item.path;
                 image.onload = function() {
-                    context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(image, 100, 100);
+                    //context.clearRect(0, 0, canvas.width, canvas.height); 
+                    context.drawImage(image, 125, 120);
                 };
                 console.log("VÁZ");
             }
@@ -36,7 +36,7 @@ function putOnCanvas(event){
                 let height = 250;
                 image.src = item.path;
                 image.onload = function() {
-                    context.clearRect(0, 0, canvas.width, canvas.height); 
+                    //context.clearRect(0, 0, canvas.width, canvas.height); 
                     context.drawImage(image, 100, 350, width, height);
                     context.drawImage(image, 500, 350, width, height);
                 };
@@ -46,8 +46,8 @@ function putOnCanvas(event){
                 let image = new Image();
                 image.src = item.path;
                 image.onload = function() {
-                    context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(image, 100, 100);
+                    //context.clearRect(0, 0, canvas.width, canvas.height); 
+                    context.drawImage(image, -80 , 190);
                 };
                 console.log("HAJTÁS");
             }
@@ -55,8 +55,8 @@ function putOnCanvas(event){
                 let image = new Image();
                 image.src = item.path;
                 image.onload = function() {
-                    context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(image, 100, 100);
+                    //context.clearRect(0, 0, canvas.width, canvas.height); 
+                    context.drawImage(image, 463, 130);
                 };
                 console.log("KORMÁNY");
             }
@@ -64,8 +64,8 @@ function putOnCanvas(event){
                 let image = new Image();
                 image.src = item.path;
                 image.onload = function() {
-                    context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(image, 100, 100);
+                    //context.clearRect(0, 0, canvas.width, canvas.height); 
+                    context.drawImage(image, 188, 110);
                 };
                 console.log("NYEREG");
             }
