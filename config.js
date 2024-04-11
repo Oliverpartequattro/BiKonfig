@@ -16,60 +16,73 @@ let container = document.getElementById('canvasContainer');
 container.appendChild(canvas);
 
 function putOnCanvas(event){
+    let frameImg
+    let wheelImg
+    let groupsetImg
+    let saddleImg
+    let handlebarImg
+
     configItems.forEach(item => {
         if(item.id == event.target.value){
             console.log(item)
             console.log(item.id)
             if(item.id.startsWith(0)){
-                let image = new Image();
-                image.src = item.path;
-                image.onload = function() {
-                    //context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(image, 125, 120);
-                };
-                console.log("VÁZ");
+                frameImg = new Image();
+                frameImg.src = item.path;
+                 console.log("VÁZ");
             }
             else if(item.id.startsWith(1)){
-                let image = new Image();
-                let width = 250;
-                let height = 250;
-                image.src = item.path;
-                image.onload = function() {
-                    //context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(image, 100, 350, width, height);
-                    context.drawImage(image, 500, 350, width, height);
-                };
+                wheelImg = new Image();
+                wheelImg.src = item.path;
                 console.log("KERÉK");
             }
             else if(item.id.startsWith(2)){
-                let image = new Image();
-                image.src = item.path;
-                image.onload = function() {
-                    //context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(image, -80 , 190);
-                };
+                groupsetImg = new Image();
+                groupsetImg.src = item.path;
                 console.log("HAJTÁS");
             }
             else if(item.id.startsWith(3)){
-                let image = new Image();
-                image.src = item.path;
-                image.onload = function() {
-                    //context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(image, 463, 130);
-                };
+                handlebarImg = new Image();
+                handlebarImg.src = item.path;
                 console.log("KORMÁNY");
             }
             else if(item.id.startsWith(4)){
-                let image = new Image();
-                image.src = item.path;
-                image.onload = function() {
-                    //context.clearRect(0, 0, canvas.width, canvas.height); 
-                    context.drawImage(image, 188, 110);
-                };
+                saddleImg = new Image();
+                saddleImg.src = item.path;
                 console.log("NYEREG");
             }
 
         }
     });
+    buildBike(frameImg, wheelImg, groupsetImg, handlebarImg, saddleImg);
 
+}
+
+function buildBike(frameImg, wheelImg, groupsetImg, handlebarImg, saddleImg) {
+    if (wheelImg) {
+        wheelImg.onload = function() {
+            context.drawImage(wheelImg, 100, 350, 250, 250);
+            context.drawImage(wheelImg, 500, 350, 250, 250);
+        };
+    }
+    if (frameImg) {
+        frameImg.onload = function() {
+            context.drawImage(frameImg, 125, 120);
+        };
+    }
+    if (groupsetImg) {
+        groupsetImg.onload = function() {
+            context.drawImage(groupsetImg, -80, 190);
+        };
+    }
+    if (handlebarImg) {
+        handlebarImg.onload = function() {
+            context.drawImage(handlebarImg, 463, 130);
+        };
+    }
+    if (saddleImg) {
+        saddleImg.onload = function() {
+            context.drawImage(saddleImg, 188, 110);
+        };
+    }
 }
