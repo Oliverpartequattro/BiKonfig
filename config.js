@@ -6,8 +6,16 @@ console.log(configItems)
 let canvas = document.createElement('canvas');
 let context = canvas.getContext('2d');
 let dropdown = document.querySelectorAll("[id='dropdownMenu']");
+let frameImg
+let wheelImg
+let groupsetImg
+let saddleImg
+let handlebarImg
+
 dropdown.forEach(element => {
-    element.addEventListener('change', putOnCanvas);
+    element.addEventListener('change', function(event) {
+        putOnCanvas(event, frameImg, wheelImg, groupsetImg, saddleImg, handlebarImg);
+    });
 });
 
 canvas.width = 850; 
@@ -15,12 +23,8 @@ canvas.height = 600;
 let container = document.getElementById('canvasContainer');
 container.appendChild(canvas);
 
+
 function putOnCanvas(event){
-    let frameImg
-    let wheelImg
-    let groupsetImg
-    let saddleImg
-    let handlebarImg
 
     configItems.forEach(item => {
         if(item.id == event.target.value){
@@ -29,7 +33,7 @@ function putOnCanvas(event){
             if(item.id.startsWith(0)){
                 frameImg = new Image();
                 frameImg.src = item.path;
-                 console.log("VÁZ");
+                console.log("VÁZ");
             }
             else if(item.id.startsWith(1)){
                 wheelImg = new Image();
@@ -54,26 +58,23 @@ function putOnCanvas(event){
 
         }
     });
-    buildBike(frameImg, wheelImg, groupsetImg, handlebarImg, saddleImg);
-
+    buildBike();
 }
 
-function buildBike(frameImg, wheelImg, groupsetImg, handlebarImg, saddleImg) {
-    let loadedImages = 0;
+function buildBike() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
     let totalImages = [frameImg, wheelImg, groupsetImg, handlebarImg, saddleImg].filter(img => img); 
     totalImages.forEach(img => {
         img.onload = function() {
-            loadedImages++;
-            if (loadedImages === totalImages.length) {
-                if (wheelImg) {
-                    context.drawImage(wheelImg, 100, 350, 250, 250);
-                    context.drawImage(wheelImg, 500, 350, 250, 250 );
+            if (wheelImg) {
+                context.drawImage(wheelImg, 100, 350, 250, 250);
+                context.drawImage(wheelImg, 500, 350, 250, 250);
+            }
+                if (frameImg) {
+                    context.drawImage(frameImg, 125, 120);
                 }
                 if (groupsetImg) {
                     context.drawImage(groupsetImg, -80, 190);
-                }
-                if (frameImg) {
-                    context.drawImage(frameImg, 125, 120);
                 }
                 if (handlebarImg) {
                     context.drawImage(handlebarImg, 463, 130);
@@ -82,6 +83,5 @@ function buildBike(frameImg, wheelImg, groupsetImg, handlebarImg, saddleImg) {
                     context.drawImage(saddleImg, 188, 110);
                 }
             }
-        };
     });
 }
