@@ -85,19 +85,19 @@ function buildBike() {
                 buildPrice += wheelImg.price;
             }
                 if (frameImg) {
-                    context.drawImage(frameImg, 125, 120);
+                    context.drawImage(frameImg, 125, 130);
                     buildPrice += frameImg.price;
                 }
                 if (groupsetImg) {
-                    context.drawImage(groupsetImg, -80, 190);
+                    context.drawImage(groupsetImg, -100, 200);
                     buildPrice +=  groupsetImg.price;
                 }
                 if (handlebarImg) {
-                    context.drawImage(handlebarImg, 463, 130);
+                    context.drawImage(handlebarImg, 464, 143);
                     buildPrice +=  handlebarImg.price;
                 }
                 if (saddleImg) {
-                    context.drawImage(saddleImg, 188, 110);
+                    context.drawImage(saddleImg, 188, 118);
                     buildPrice += saddleImg.price;
                 }
                 buildCost.innerHTML = buildPrice
