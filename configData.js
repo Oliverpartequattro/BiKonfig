@@ -3,7 +3,7 @@
 const configData = [
 
         'nemkérek;0;nemkérek;0;images/blank.png;00',
-        'váz1;99990;váz;0;images/vaz_alap.png;01',
+        'váz1;99990;váz;0;images/vaz_trekking.png;01',
         'váz2;199990;váz;0;images/vaz_gravel.png;02',
         'váz3;349990;váz;0;images/vaz_race.png;03',
 
