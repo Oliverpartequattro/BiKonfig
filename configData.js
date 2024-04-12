@@ -5,8 +5,8 @@ const configData = [
 
         'váz1;100;váz;0;images/vaz_alap.png;01',
         'váz2;100;váz;0;images/kerek1.jpg;02',
-        'váz3;100;váz;0;images/kerek1.jpg;03',
-        'váz4;100;váz;0;images/kerek1.jpg;04',
+        'váz3;200;váz;0;images/vaz_race.png;03',
+        'váz4;100;váz;0;images/vaz_race.png;04',
 
         'kerék1;100;kerék;0;images/kerek_alap.png;11',
         'kerék1;100;kerék;0;images/kerek_sport.png;12',
