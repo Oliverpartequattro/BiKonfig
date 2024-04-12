@@ -7,7 +7,7 @@ const configData = [
         'váz4;100;váz;0;images/kerek1.jpg;04',
 
         'kerék1;100;kerék;0;images/kerek_alap.png;11',
-        'kerék1;100;kerék;0;images/kerek1.jpg;12',
+        'kerék1;100;kerék;0;images/kerek_sport.png;12',
         'kerék1;100;kerék;0;images/kerek1.jpg;13',
         'kerék1;100;kerék;0;images/kerek1.jpg;14',
 
