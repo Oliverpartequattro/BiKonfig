@@ -6,6 +6,8 @@ console.log(configItems)
 let canvas = document.createElement('canvas');
 let context = canvas.getContext('2d');
 let dropdown = document.querySelectorAll("[id='dropdownMenu']");
+let buildCost = document.getElementById("buildCost");
+let buildPrice = 0
 let frameImg
 let wheelImg
 let groupsetImg
@@ -33,27 +35,37 @@ function putOnCanvas(event){
             if(item.id.startsWith(0)){
                 frameImg = new Image();
                 frameImg.src = item.path;
+                frameImg.price = item.price
+                console.log(frameImg.price)
                 console.log("VÁZ");
             }
             else if(item.id.startsWith(1)){
                 wheelImg = new Image();
                 wheelImg.src = item.path;
+                wheelImg.price = item.price
                 console.log("KERÉK");
             }
             else if(item.id.startsWith(2)){
                 groupsetImg = new Image();
                 groupsetImg.src = item.path;
+                groupsetImg.price = item.price
+                buildPrice += item.price;
                 console.log("HAJTÁS");
             }
             else if(item.id.startsWith(3)){
                 handlebarImg = new Image();
                 handlebarImg.src = item.path;
+                handlebarImg.price = item.price
+                buildPrice += item.price;
                 console.log("KORMÁNY");
             }
             else if(item.id.startsWith(4)){
                 saddleImg = new Image();
                 saddleImg.src = item.path;
+                saddleImg.price = item.price
+                buildPrice += item.price;
                 console.log("NYEREG");
+
             }
 
         }
@@ -62,6 +74,7 @@ function putOnCanvas(event){
 }
 
 function buildBike() {
+    buildPrice = 0
     context.clearRect(0, 0, canvas.width, canvas.height);
     let totalImages = [frameImg, wheelImg, groupsetImg, handlebarImg, saddleImg].filter(img => img); 
     totalImages.forEach(img => {
@@ -69,19 +82,25 @@ function buildBike() {
             if (wheelImg) {
                 context.drawImage(wheelImg, 100, 350, 250, 250);
                 context.drawImage(wheelImg, 500, 350, 250, 250);
+                buildPrice += wheelImg.price;
             }
                 if (frameImg) {
                     context.drawImage(frameImg, 125, 120);
+                    buildPrice += frameImg.price;
                 }
                 if (groupsetImg) {
                     context.drawImage(groupsetImg, -80, 190);
+                    buildPrice +=  groupsetImg.price;
                 }
                 if (handlebarImg) {
                     context.drawImage(handlebarImg, 463, 130);
+                    buildPrice +=  handlebarImg.price;
                 }
                 if (saddleImg) {
                     context.drawImage(saddleImg, 188, 110);
+                    buildPrice += saddleImg.price;
                 }
+                buildCost.innerHTML = buildPrice
             }
     });
 }
