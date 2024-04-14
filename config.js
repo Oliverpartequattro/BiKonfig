@@ -1,5 +1,7 @@
 import { ConfigItem } from './configItem.js';
 import configData from './configData.js';
+
+console.log(cart)
 let configItems = ConfigItem.loadData(configData);
 console.log(configItems)
 
@@ -7,12 +9,15 @@ let canvas = document.createElement('canvas');
 let context = canvas.getContext('2d');
 let dropdown = document.querySelectorAll("[id='dropdownMenu']");
 let buildCost = document.getElementById("buildCost");
+let configCart = document.getElementById("configCart");
 let buildPrice = 0
 let frameImg
 let wheelImg
 let groupsetImg
 let saddleImg
 let handlebarImg
+
+configCart.addEventListener("click", configItemToCart)
 
 dropdown.forEach(element => {
     element.addEventListener('change', function(event) {
@@ -101,7 +106,13 @@ function buildBike() {
                     context.drawImage(saddleImg, 188, 118);
                     buildPrice += saddleImg.price;
                 }
-                buildCost.innerHTML = buildPrice
+                buildCost.innerHTML = buildPrice.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' });
             }
     });
+}
+
+function configItemToCart(){
+let customBike = []
+
+
 }

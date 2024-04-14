@@ -202,3 +202,11 @@ body{
 .side-menu p{
     margin-top: 100px;
 }
+
+.buildCost{
+    font-size: 30px;
+}
+
+#buildCost{
+    font-weight: bold;
+}
