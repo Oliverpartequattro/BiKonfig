@@ -57,6 +57,7 @@ function putOnCanvas(event){
                 handlebarImg.src = item.path;
                 handlebarImg.price = item.price
                 buildPrice += item.price;
+                console.log(item)
                 console.log("KORMÁNY");
             }
             else if(item.id.startsWith(4)){

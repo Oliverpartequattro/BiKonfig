@@ -20,9 +20,8 @@ const configData = [
 
         'nemkérek;0;nemkérek;0;images/blank.png;30',
         'kormány1;100;kormány;0;images/kormany_alap.png;31',
-        'kormány2;100;kormány;0;images/kerek1.jpg;32',
-        'kormány3;100;kormány;0;images/kerek1.jpg;33',
-        'kormány4;100;kormány;0;images/kerek1.jpg;34',
+        'kormány2;100;kormány;0;images/kormany_sport.png;32',
+        'kormány3;100;kormány;0;images/kormany_race.png;33',
 
         'nemkérek;0;nemkérek;0;images/blank.png;40',
         'nyereg1;100;nyereg;0;images/nyereg_alap.png;41',
