@@ -26,9 +26,8 @@ const configData = [
 
         'nemkérek;0;nemkérek;0;images/blank.png;40',
         'nyereg1;100;nyereg;0;images/nyereg_alap.png;41',
-        'nyereg2;100;nyereg;0;images/kerek1.jpg;42',
-        'nyereg3;100;nyereg;0;images/kerek1.jpg;43',
-        'nyereg4;100;nyereg;0;images/kerek1.jpg;44',
+        'nyereg3;100;nyereg;0;images/nyereg_sport.png;42',
+        'nyereg2;100;nyereg;0;images/nyereg_race.png;43',
 ];
 
 export default configData
