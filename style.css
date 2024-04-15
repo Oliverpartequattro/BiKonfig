@@ -210,3 +210,7 @@ body{
 #buildCost{
     font-weight: bold;
 }
+
+.card{
+    margin-bottom: 50px;
+}
