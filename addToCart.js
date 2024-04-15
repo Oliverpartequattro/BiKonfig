@@ -31,8 +31,16 @@ export function addToCartFunction(bikesData) {
     }
 
     let bikeContainer = document.getElementById('bikeContainer');
+    let configCart = document.getElementById("configCart");
     if (bikeContainer) {
         bikeContainer.addEventListener('click', function(event) {
+            if (event.target.classList.contains('toCart')) {
+                addToCart(event.target);
+            }
+        });
+    }
+    if (configCart) {
+        configCart.addEventListener('click', function(event) {
             if (event.target.classList.contains('toCart')) {
                 addToCart(event.target);
             }

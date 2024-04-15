@@ -1,7 +1,8 @@
 import { ConfigItem } from './configItem.js';
 import configData from './configData.js';
+import { Bike } from './item.js';
+import { addToCartFunction } from './addToCart.js';
 
-console.log(cart)
 let configItems = ConfigItem.loadData(configData);
 console.log(configItems)
 
@@ -111,8 +112,9 @@ function buildBike() {
     });
 }
 
-function configItemToCart(){
-let customBike = []
-
-
+function configItemToCart() {
+    let customBike = new Bike(`custom;2024;${buildPrice};uj;images/kerek1.jpg;50`);
+    console.log(customBike)
+    addToCartFunction([customBike]);
 }
+
