@@ -14,8 +14,8 @@ cart = JSON.parse(localStorage.getItem('cart'));
         
 //     }
 // }
-jaaa()
-function jaaa() {
+BucketAll()
+function BucketAll() {
     
     console.log(cart)
     if(cart.length == 0){
@@ -23,6 +23,8 @@ function jaaa() {
     }
     else{
         let i = 0
+        let sum = 0
+
         cart.forEach(element => {
             // dotnum = element.price.length % 3
             // dottedprice = String(element.price)
@@ -30,6 +32,7 @@ function jaaa() {
             //     const element = array[i];
                 
             // }
+            
             let DeletButton = document.createElement('button')
             DeletButton.classList.add('CartDeletProduct')
             DeletButton.id = `deletProduct${i}`
@@ -42,12 +45,14 @@ function jaaa() {
 
             let CartItem = document.createElement('div')
             CartItem.id = `cart${i}`
-            CartItem.innerHTML = `<div class="cartItems row">
+            CartItem.innerHTML = `
+            <div class="cartItems card">
+            <div class="card-body row p-5">
             <hr class="pb-3">
-            <div class="Bimg col-3">
+            <div class="Bimg col-4">
               <img class="" src="${element.path}" alt="">
             </div>
-                <ul class="col-9">
+                <ul class="col-8">
                   <li class="row">
                     <div class="col-5">
                       <ul class="aboutBicicle">
@@ -82,9 +87,9 @@ function jaaa() {
                     <hr>
                   </li>
                   <li class="row">
-                    <div class="col-6">
+                    <div class="col-7">
                     </div>
-                    <div class="col-6">
+                    <div class="col-5">
                       <ul class="aboutBicicle">
                         <li class="priceli2">Részösszge: ${element.price.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' })}<span></span></li>
                         <li><p>Szállításösszeg: <span>Ingyenes</span></p></li>
@@ -92,22 +97,39 @@ function jaaa() {
                     </div>
                     <hr>
                   </li>
-                  <li class="row">
-                    <div class="col-6"></div>
-                    <div class="col-6 ">
-                      <h3>Végösszeg: <span>500.000 Ft</span></h3>
-                    </div>
-                    <hr>
-                  </li>
+                  
                 </ul>
+                </div>
             </div>`
 
             CartItems.appendChild(CartItem)
-
+            sum += element.price
             
             i++
-            
           });
+          console.log(sum);
+          let BuyButton = document.createElement('button')
+          BuyButton.classList.add('btn')
+          BuyButton.classList.add('toCart')
+          BuyButton.innerHTML = "Vásárlás"
+
+          let sumPrice = document.createElement('div')
+          sumPrice.classList.add('cartItems')
+          sumPrice.innerHTML = `
+            <div class="card ps-5 pe-5">
+            <hr>
+            <li class="row">
+              <div class="col-7"></div>
+              <div class="col-5 ">
+                <h3>Végösszeg: <span class="${sum}" id="SumMoney">${sum.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' })}</span></h3>
+              </div>
+              <hr>
+            </li>
+            <div class = "card-body">
+              ${BuyButton.outerHTML}
+            </div>
+            </div>`
+          CartItems.appendChild(sumPrice);
         }
 }
       document.addEventListener('click', function(event) {
@@ -121,7 +143,13 @@ function jaaa() {
           removeFromCartByIndex(id)
         }
         else if(event.target.id.includes('insuranceProduct')){
-
+          let data = document.getElementById(`SumMoney`)
+          console.log(data);
+          console.log(data.classList.value);
+          let newPrice = Number(data.classList.value) + 50000
+          data.innerHTML = `${newPrice.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' })}`
+          data.classList = ""
+          data.classList.add(newPrice) 
         }
       });
 
