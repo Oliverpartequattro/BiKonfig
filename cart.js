@@ -4,6 +4,7 @@ let options = []
 let cart = []
 let data
 cart = JSON.parse(localStorage.getItem('cart'));
+
 // if (cart.length != 0) {
 //     for (let i = 1; i < 10; i++) {
 //         data = document.createElement('option');
@@ -31,18 +32,20 @@ function jaaa() {
             // }
             let DeletButton = document.createElement('button')
             DeletButton.classList.add('CartDeletProduct')
+            DeletButton.id = `deletProduct${i}`
             DeletButton.innerHTML = "Törlés"
 
-            DeletButton.addEventListener('click', function() {
-                console.log("faaaasz");
-            });
+            let InsuranceButton = document.createElement('button')
+            InsuranceButton.classList.add('CartDeletProduct')
+            InsuranceButton.id = `insuranceProduct${i}`
+            InsuranceButton.innerHTML = "Hozzáadás"
 
             let CartItem = document.createElement('div')
             CartItem.id = `cart${i}`
             CartItem.innerHTML = `<div class="cartItems row">
             <hr class="pb-3">
             <div class="Bimg col-3">
-              <img class="" src="images/kerek1.jpg" alt="">
+              <img class="" src="${element.path}" alt="">
             </div>
                 <ul class="col-9">
                   <li class="row">
@@ -60,7 +63,7 @@ function jaaa() {
                     <div class="col-4">
                       <ul class="aboutBicicle ">
                         <li class="priceli">
-                          <h3 class="BiciclePrice">${element.price} Ft</h3>
+                          <h3 class="BiciclePrice">${element.price.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' })}</h3>
                         </li>
                         <li>
                             ${DeletButton.outerHTML}
@@ -74,7 +77,7 @@ function jaaa() {
                       <p>Biztonságban szeretné érezni kerékpárját? Kössön rá BringaBirodalom biztosítást ami egy évnyi biztosítást ad önnek </p>
                     </div>
                     <div class="col-4">
-                      <button value="1" class="CartDeletProduct">Hozzáadas</button>
+                        ${InsuranceButton.outerHTML}
                     </div>
                     <hr>
                   </li>
@@ -83,7 +86,7 @@ function jaaa() {
                     </div>
                     <div class="col-6">
                       <ul class="aboutBicicle">
-                        <li class="priceli2">Részösszge: ${element.price} Ft<span></span></li>
+                        <li class="priceli2">Részösszge: ${element.price.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' })}<span></span></li>
                         <li><p>Szállításösszeg: <span>Ingyenes</span></p></li>
                       </ul>
                     </div>
@@ -100,8 +103,33 @@ function jaaa() {
             </div>`
 
             CartItems.appendChild(CartItem)
-            i+=1
 
-        });
-    }
+            
+            i++
+            
+          });
+        }
 }
+      document.addEventListener('click', function(event) {
+        console.log(event)
+        if (event.target.id.includes('deletProduct')) {
+          let id = event.target.id.slice(12)
+          console.log(Number(id));
+          console.log(`cart${id}`);
+          elementRemove = document.getElementById(`cart${id}`)
+          CartItems.removeChild(elementRemove)
+          removeFromCartByIndex(id)
+        }
+        else if(event.target.id.includes('insuranceProduct')){
+
+        }
+      });
+
+      function removeFromCartByIndex(index) {
+        if (index >= 0 && index < cart.length) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+        } else {
+            alert("Invalid index!");
+        }
+    }
