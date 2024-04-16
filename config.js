@@ -4,6 +4,7 @@ import { Bike } from './item.js';
 import { addToCartFunction } from './addToCart.js';
 
 let configItems = ConfigItem.loadData(configData);
+let canvasContainer = document.querySelectorAll(".canvascontainer1")
 console.log(configItems)
 
 let canvas = document.createElement('canvas');
@@ -31,9 +32,7 @@ canvas.height = 600;
 let container = document.getElementById('canvasContainer');
 container.appendChild(canvas);
 
-
 function putOnCanvas(event){
-
     configItems.forEach(item => {
         if(item.id == event.target.value){
             console.log(item)
@@ -72,9 +71,7 @@ function putOnCanvas(event){
                 saddleImg.price = item.price
                 buildPrice += item.price;
                 console.log("NYEREG");
-
             }
-
         }
     });
     buildBike();
@@ -84,6 +81,8 @@ function buildBike() {
     buildPrice = 0
     context.clearRect(0, 0, canvas.width, canvas.height);
     let totalImages = [frameImg, wheelImg, groupsetImg, handlebarImg, saddleImg].filter(img => img); 
+    let imagesLoaded = 0;
+
     totalImages.forEach(img => {
         img.onload = function() {
             if (wheelImg) {
@@ -91,30 +90,35 @@ function buildBike() {
                 context.drawImage(wheelImg, 500, 350, 250, 250);
                 buildPrice += wheelImg.price;
             }
-                if (frameImg) {
-                    context.drawImage(frameImg, 125, 130);
-                    buildPrice += frameImg.price;
-                }
-                if (groupsetImg) {
-                    context.drawImage(groupsetImg, -100, 200);
-                    buildPrice +=  groupsetImg.price;
-                }
-                if (handlebarImg) {
-                    context.drawImage(handlebarImg, 464, 143);
-                    buildPrice +=  handlebarImg.price;
-                }
-                if (saddleImg) {
-                    context.drawImage(saddleImg, 188, 118);
-                    buildPrice += saddleImg.price;
-                }
-                buildCost.innerHTML = buildPrice.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' });
+            if (frameImg) {
+                context.drawImage(frameImg, 125, 130);
+                buildPrice += frameImg.price;
             }
+            if (groupsetImg) {
+                context.drawImage(groupsetImg, -100, 200);
+                buildPrice +=  groupsetImg.price;
+            }
+            if (handlebarImg) {
+                context.drawImage(handlebarImg, 464, 143);
+                buildPrice +=  handlebarImg.price;
+            }
+            if (saddleImg) {
+                context.drawImage(saddleImg, 188, 118);
+                buildPrice += saddleImg.price;
+            }
+            buildCost.innerHTML = buildPrice.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' });
+
+            imagesLoaded++;
+            if (imagesLoaded === totalImages.length) {
+                configItemToCart();
+            }
+        };
     });
 }
 
 function configItemToCart() {
-    let customBike = new Bike(`custom;2024;${buildPrice};uj;images/kerek1.jpg;50`);
+    let customBike = new Bike(`Cipollini NK1K;2008;${buildPrice};uj;asdasd;images/cipolliniNK1K.jpg;50`)
     console.log(customBike)
+    canvasContainer.classList.add("spinTheBike")
     addToCartFunction([customBike]);
 }
-

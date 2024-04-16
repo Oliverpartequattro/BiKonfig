@@ -214,3 +214,7 @@ body{
 .card{
     margin-bottom: 50px;
 }
+
+.spinTheBike{
+    animation: spin 2s linear infinite;
+}
