@@ -42,3 +42,9 @@
     font-size: x-large;
     font-weight: 100;
 }
+.BuyData{
+  text-align: left;
+}
+.CardData{
+  text-align: right;
+}

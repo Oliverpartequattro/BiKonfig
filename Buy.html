@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BringaBirodalom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+</head>
+<body>
+    <div class="navbar">
+        <a href="indexx.html" class="logo"><img src="images/BBLOGO.png" alt="" width="100px"></a>
+        <a href="indexx.html" class="navactive navhover underline">Bolt</a>
+        <a href="configurator.html" class="navhover underline">Konfigurátor</a>
+        <a href="cart.html" class="scale"><img src="images/basket.png" alt="" width="100px"></a>
+        <p class="navhover"><span id="count"></span></p>
+    </div>
+
+    <div id="BuyContainer" class="container mt-5">
+        <div class="card">
+            <div class="row  ps-3">
+                <ul class="col-6 BuyData">
+                    <li class="row pt-3">
+                        <div class="col-6">
+                            <label for="Name">First Name</label>
+                            <input type="text" name="Name" id="NameInput" placeholder=" Élő" >
+                        </div>
+                        <div class="col-6 pb-3">
+                            <label for="Name">Last Name</label>
+                            <input type="text" name="Name" id="NameInput" placeholder=" Olivér">
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="col-12 pb-3">
+                            <label for="CompanyName">Cégnév (Nem kötelező)</label>
+                            <input type="text" name="CompanyName" id="CompanyInput" placeholder=" Audi Hungaria.inc" size="54">
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="col-12 pb-3">
+                            <label for="CountryName">Ország</label>
+                            <input type="text" name="CountryName" id="CountryInput" placeholder=" Magyarország" size="71">
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="col-6">
+                            <label for="Name">Irányítószám</label>
+                            <input type="text" name="Name" id="NameInput" placeholder=" 9200" >
+                        </div>
+                        <div class="col-6 pb-3">
+                            <label for="Name">Település</label>
+                            <input type="text" name="Name" id="NameInput" placeholder=" Győr" size="21">
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="col-12 pb-3">
+                            <label for="CountryName">Utca, Házszám</label>
+                            <input type="text" name="CountryName" id="CountryInput" placeholder=" Kederföldi utca 12." size="63">
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="col-12 pb-3">
+                            <label for="CountryName">Telefonszám</label>
+                            <input type="text" name="CountryName" id="CountryInput" placeholder=" 06 30 122 5478" size="66">
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="col-12 pb-3">
+                            <label for="CountryName">E-mail cim</label>
+                            <input type="text" name="CountryName" id="CountryInput" placeholder=" gipsz.jakab@gmail.com" size="68">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="col-5 CardData">
+                <li class="row pt-3">
+                    <div class="col-12 pb-3">
+                        <input type="text" name="CountryName" id="CountryInput" placeholder=" XXXX XXXX XXXX XXXX" size="44">
+                        <label for="CountryName">Bankkártya száma</label>
+                    </div>
+                </li>
+                <li class="row pt-3">
+                    <div class="col-12 pb-3">
+                        <input type="text" name="CountryName" id="CountryInput" placeholder=" Gipsz Jakab János" size="40">
+                        <label for="CountryName">kártyátn szereplő név</label>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="col-6">
+                        <label for="Name">Irányítószám</label>
+                        <input type="text" name="Name" id="NameInput" placeholder=" 9200" >
+                    </div>
+                    <div class="col-6 pb-3">
+                        <label for="Name">Település</label>
+                        <input type="text" name="Name" id="NameInput" placeholder=" Győr" size="21">
+                    </div>
+                </li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script type="module" src="script.js"></script>
+<script type="module" src="createCard.js"></script>
+
+</body>
+</html>

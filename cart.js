@@ -164,6 +164,9 @@ function BucketAll() {
             alert("Már van biztosítás ezen a bicikliden! ")
           }
         }
+        else if (event.target.id == "BuyButton") {
+          window.location.href = 'Buy.html'
+        }
       });
 
       function removeFromCartByIndex(index) {
