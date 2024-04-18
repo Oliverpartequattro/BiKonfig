@@ -19,12 +19,15 @@ export function addToCartFunction(bikesData) {
                     cart = []
                     localStorage.setItem('cart', JSON.stringify(cart)); 
                     updateCartCount() //EZ KIURITI
+                    location.reload()
                 }
                 else{
                     cart.push(element)
                     localStorage.setItem('cart', JSON.stringify(cart));
                     console.log(cart)
                     updateCartCount(); 
+                    alert("Sikeres kosárhoz adás!")
+                    location.reload()
                 }
             }
         });
