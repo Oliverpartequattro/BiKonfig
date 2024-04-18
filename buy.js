@@ -43,26 +43,16 @@ function PayChech() {
             Continue = false
         }
     });
-    // Continue == false ||
-    if ( PayRules.checked != 1 || ShopRules.checked != 1) {
+    
+    if (Continue == false || PayRules.checked != 1 || ShopRules.checked != 1) {
         alert(`Nem tö ltöttél ki mindent!`)
     }
     else{
-        let l = cart.length
-        for (let i = 0; i < l; i++) {
-            removeFromCartByIndex(0)
-        }
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
         alert("Köszönjük a vásárlás.")
         window.location.href = 'indexx.html'
     } 
     
 }
 
-function removeFromCartByIndex(index) {
-    if (index >= 0 && index < cart.length) {
-        cart.splice(index, 1);
-        localStorage.setItem('cart', JSON.stringify(cart));
-    } else {
-        alert("Invalid index!");
-    }
-  }

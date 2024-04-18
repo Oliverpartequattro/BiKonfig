@@ -5,20 +5,28 @@ let cart = []
 let data
 cart = JSON.parse(localStorage.getItem('cart'));
 
-
 BucketAll()
 function BucketAll() {
     
     console.log(cart)
     if(cart.length == 0){
-        CartItems.innerHTML = `A kosara üres.`
+      let ImgDiv = document.createElement('div')
+      let Img = document.createElement('img')
+      Img.src = "images/BBLOGO.PNG"
+      ImgDiv.classList.add("EmptyCart")
+      let Empty = document.createElement('div')
+      Empty.innerHTML = `A kosara üres.`
+      Empty.classList = 'EmptyCart'
+      Empty.classList.add("pb-5")
+      CartItems.appendChild(Empty)
+      ImgDiv.appendChild(Img)
+      CartItems.appendChild(ImgDiv)
     }
     else{
         let i = 0
         let sum = 0
 
         cart.forEach(element => {
-            
             
             let DeletButton = document.createElement('button')
             DeletButton.classList.add('CartDeletProduct')
@@ -48,9 +56,6 @@ function BucketAll() {
                       </ul>
                     </div>
                     <div class="col-3">
-                      <select name="" id="CartBuyProductNumber">
-
-                      </select>
                     </div>
                     <div class="col-4">
                       <ul class="aboutBicicle ">
@@ -133,6 +138,7 @@ function BucketAll() {
           elementRemove = document.getElementById(`cart${id}`)
           CartItems.removeChild(elementRemove)
           removeFromCartByIndex(id)
+          this.location.reload()
         }
         else if(event.target.id.includes('insuranceProduct')){
           let cost = 50000;
