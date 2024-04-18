@@ -1,12 +1,17 @@
 //név;év;ár;állapot;path;id
 
 const data = [
-    'Cipollini NK1K;2008;2390000;uj;asdasd;images/cipolliniNK1K.jpg;1',
-    'TREK Madone SLR 9;2008;2590000;uj;asdasd;images/trekmadoneslr9.jpg;2',
-    'Wilier Zero SLR;2008;2990000;uj;asdasd;images/willierzeroslr.png;3',
-    'Canyon Aeroad CFR MVDP Edition;2008;2790000;uj;asdasd;images/canyonaeroadcfrmvdp.png;4',
-    'Bianchi Oltre XR4;2008;2390000;uj;asdasd;images/bianchioltrexr4.jpg;5',
-    'Cannondale Topstone 3;2008;1190000;uj;asdasd;images/cannondaletopstone.jpg;6',
+    'Cipollini NK1K;2008;2390000;uj;A hihetetlen NK1K országúti váz a legmodernebb technológiát képviseli. A két méretben kapható, aerodinamikus formába integrált karbon kormánycsap fedél a jövő fékrendszerei számára lett kialakítva. Tárcsafékkel vagy Direct Mount rendszerrel választható, az NK1K éles és agresszív vonalvezetésű. Ez az egyetlen monokokk váz, amely napjainkban a lehető legjobb teljesítményt nyújtja sebesség tekintetében. Készen áll, hogy dicsőséges lapokat írjon a kerékpározás történetébe. És hogy örökre bevésődjön az igazi rajongók szívébe.;images/cipolliniNK1K.jpg;1',
+
+    'TREK Madone SLR 9;2008;2590000;uj;A Madone SLR 9 Disc az abszolút csúcs aerodinamikus szuperbicikli. Az új, ulrakönnyű 800-as sorozatú OCLV Carbon váz, az állítható rugalmasság és a Shimano Dura-Ace Di2 elektronikus váltómű a hihetetlenül gyors, csúcsminőségű országúti kerékpár keresésének végállomása.;images/trekmadoneslr9.jpg;2',
+
+    'Wilier Zero SLR;2008;2990000;uj;A Wilier 0 SLR az első ultra könnyű országúti kerékpár tárcsafékekkel és teljes mértékben integrált bowdenekkel. A Wilier 0 SLR a legösszetettebb könnyedség és teljes integráció koncepcióit ötvözi egyszerű esztétikával. Ezek azok a tulajdonságok, amelyeket a legigényesebb kerékpárosok keresnek a legmodernebb versenygépekben: ultranagyobb könnyűség, nagy sebességnél is stabil irányítás, kiváló fékteljesítmény, elektronikus váltás, magas aerodinamika és teljes körű bowdenintegráció.Mindezt a Wilier összetéveszthetetlen stílusában ötvözték.;images/willierzeroslr.png;3',
+
+    'Canyon Aeroad CFR MVDP Edition;2008;2790000;uj;A Mathieu van der Poel exkluzív dizájnjának különleges fénypontja a fejcső elején található, háromdimenziós MVDP logó. Az exkluzív MVDP grafikával ez a kerékpár biztosan magára vonzza a tekinteteket.A teljes kábel- és vezeték integrációval szupertiszta megjelenést és csökkentett légellenállást érhet el egyszerre. Az egyetlen szerszámmal állítható magasságnak és szélességnek köszönhetően a nagy távtartó tornyok és az időigényes kormánycserék a múlté.Az Aeroad CFR egy olyan váz köré épül, amelyet a Swiss Side aerodinamikai szakértőivel közösen fejlesztettünk. Szélcsatornában teszteltük, és ötvözi a kiemelkedő hatékonyságot az agilis irányítással és az innovatív állíthatósággal. Ez egy olyan versenygépe, amely semmilyen kompromisszumot nem köt.;images/canyonaeroadcfrmvdp.png;4',
+
+    'Bianchi Oltre XR4;2008;2390000;uj;Az Oltre XR4 egy teljesítményre hangolt kerékpár. Pontos kezelhetősége a rezgéscsillapító Bianchi CV rendszerrel kombinálva páratlan irányítást biztosít. A tökéletes erőátvitelnek köszönhetően a pedálokra kifejtett minden egyes watt közelebb visz a győzelemhez. Ha eléggé akarod, az Oltre XR4 lesz az az eszköz, amivel a legfelsőbb szintekre juthatsz. Az áramvonalasság kulcsfontosságú az Oltre XR4 Disc esetében, és ez kiterjed az új Metron 5D ACR aero kormányra is, amely magában foglalja a teljesen zárt kábelvezetést a kormányon és a kormányszáron keresztül – a hidraulikus fékek és a sebességváltó kábelei számára.A Metron 5D ACR kormány és kormányszár az Oltre XR4-nek letisztultabb és áramvonalasabb külsőt kölcsönöz, a minél nagyobb sebesség és hatékonyság érdekében.;images/bianchioltrexr4.jpg;5',
+
+    'Cannondale Topstone 3;2008;1190000;uj;A Topstone Carbon rengeteg rögzítési ponttal büszkélkedhet a vázon és a villán, melyek ideálisak táskák, kulacstartók és egyéb felszerelések számára, így tökéletes választás túrázáshoz és hosszabb távú utazásokhoz. Akár sima aszfalton, akár rögös terepen haladsz, a kerékpár stabilitást és magabiztos irányítást nyújt. A terepen sínen siklik, garantálva a mosolyt az arcodon. Az OutFront kormánygeometria révén a Topstone Carbon egyaránt kiválóan kezelhető a durva terepen is, ahol stabilitást biztosít, és a könnyedebb terepen is, ahol agilis és játékos vezetési élményt nyújt.;images/cannondaletopstone.jpg;6',
 ]
 
 export default data
