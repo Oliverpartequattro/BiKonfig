@@ -1,6 +1,7 @@
 export function addToCartFunction(bikesData) {
     let bikes = bikesData;
     let cart = []
+    let canvasContainer = document.getElementById("canvascontainer1")
     
     if (localStorage.getItem('cart')) {
         cart = JSON.parse(localStorage.getItem('cart'));
@@ -19,12 +20,24 @@ export function addToCartFunction(bikesData) {
                     cart = []
                     localStorage.setItem('cart', JSON.stringify(cart)); 
                     updateCartCount() //EZ KIURITI
+                    location.reload()
                 }
                 else{
                     cart.push(element)
                     localStorage.setItem('cart', JSON.stringify(cart));
                     console.log(cart)
                     updateCartCount(); 
+                    if(canvasContainer){
+                        canvasContainer.classList.add("spinTheBike");
+                        setTimeout(() => {
+                            alert("Sikeres kosárhoz adás!")
+                            location.reload()
+                        }, 20000); 
+                    }       
+
+                    else{
+                        alert("Sikeres kosárhoz adás!")
+                    }                                                
                 }
             }
         });
