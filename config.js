@@ -6,8 +6,6 @@ import { addToCartFunction } from './addToCart.js';
 let configItems = ConfigItem.loadData(configData);
 console.log(configItems)
 
-let canvasContainer = document.getElementById("canvascontainer1")
-
 let canvas = document.createElement('canvas');
 let context = canvas.getContext('2d');
 let dropdown = document.querySelectorAll("[id='dropdownMenu']");
@@ -108,7 +106,6 @@ function buildBike() {
             }
             buildCost.innerHTML = buildPrice.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' });
 
-            // Call configItemToCart here after images are drawn
             configItemToCart();
         };
     });
@@ -118,10 +115,6 @@ function buildBike() {
 function configItemToCart() {
     let customBike = new Bike(`Cipollini NK1K;2008;${buildPrice};uj;asdasd;images/cipolliniNK1K.jpg;50`)
     console.log(customBike)
-    canvasContainer.classList.add("spinTheBike")
     addToCartFunction([customBike]);
 
-    setTimeout(() => {
-        canvasContainer.classList.remove("spinTheBike");
-    }, 2000);
 }
