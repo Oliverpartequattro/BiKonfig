@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BringaBirodalom</title>
+    <link rel="icon" href="images/BBLOGO.PNG">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
@@ -19,85 +20,108 @@
     </div>
 
     <div id="BuyContainer" class="container mt-5">
-        <div class="card">
-            <div class="row  ps-3">
-                <ul class="col-6 BuyData">
-                    <li class="row pt-3">
-                        <div class="col-6">
-                            <label for="Name">First Name</label>
-                            <input type="text" name="Name" id="NameInput" placeholder=" Élő" >
-                        </div>
-                        <div class="col-6 pb-3">
-                            <label for="Name">Last Name</label>
-                            <input type="text" name="Name" id="NameInput" placeholder=" Olivér">
-                        </div>
-                    </li>
-                    <li class="row">
-                        <div class="col-12 pb-3">
-                            <label for="CompanyName">Cégnév (Nem kötelező)</label>
-                            <input type="text" name="CompanyName" id="CompanyInput" placeholder=" Audi Hungaria.inc" size="54">
-                        </div>
-                    </li>
-                    <li class="row">
-                        <div class="col-12 pb-3">
-                            <label for="CountryName">Ország</label>
-                            <input type="text" name="CountryName" id="CountryInput" placeholder=" Magyarország" size="71">
-                        </div>
-                    </li>
-                    <li class="row">
-                        <div class="col-6">
-                            <label for="Name">Irányítószám</label>
-                            <input type="text" name="Name" id="NameInput" placeholder=" 9200" >
-                        </div>
-                        <div class="col-6 pb-3">
-                            <label for="Name">Település</label>
-                            <input type="text" name="Name" id="NameInput" placeholder=" Győr" size="21">
-                        </div>
-                    </li>
-                    <li class="row">
-                        <div class="col-12 pb-3">
-                            <label for="CountryName">Utca, Házszám</label>
-                            <input type="text" name="CountryName" id="CountryInput" placeholder=" Kederföldi utca 12." size="63">
-                        </div>
-                    </li>
-                    <li class="row">
-                        <div class="col-12 pb-3">
-                            <label for="CountryName">Telefonszám</label>
-                            <input type="text" name="CountryName" id="CountryInput" placeholder=" 06 30 122 5478" size="66">
-                        </div>
-                    </li>
-                    <li class="row">
-                        <div class="col-12 pb-3">
-                            <label for="CountryName">E-mail cim</label>
-                            <input type="text" name="CountryName" id="CountryInput" placeholder=" gipsz.jakab@gmail.com" size="68">
-                        </div>
-                    </li>
-                </ul>
-                <ul class="col-5 CardData">
-                <li class="row pt-3">
-                    <div class="col-12 pb-3">
-                        <input type="text" name="CountryName" id="CountryInput" placeholder=" XXXX XXXX XXXX XXXX" size="44">
-                        <label for="CountryName">Bankkártya száma</label>
+        <div class="row">
+            <div class="col-6">
+                <div class="card CardMy">
+                    <div class="row  ps-3 pe-3">
+                        <ul class="col-12 BuyData">
+                            <li class="row pt-3">
+                                <div class="col-6">
+                                    <label for="Name">First Name</label>
+                                    <input type="text" name="Name" id="NameInput" placeholder=" Élő" size="30">
+                                </div>
+                                <div class="col-6 pb-3">
+                                    <label for="Name">Last Name</label>
+                                    <input type="text" name="Name" id="NameInput" placeholder=" Olivér" size="31">
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-12 pb-3">
+                                    <label for="CompanyName">Cégnév (Nem kötelező)</label>
+                                    <input type="text" name="CompanyName" id="CompanyInput" placeholder=" Audi Hungaria.inc" size="68">
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-12 pb-3">
+                                    <label for="CountryName">Ország</label>
+                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" Magyarország" size="68">
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-6">
+                                    <label for="Name">Irányítószám</label><br>
+                                    <input type="text" name="Name" id="NameInput" placeholder=" 9200" size="30">
+                                </div>
+                                <div class="col-6 pb-3">
+                                    <label for="Name">Település</label><br>
+                                    <input type="text" name="Name" id="NameInput" placeholder=" Győr" size="31">
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-12 pb-3">
+                                    <label for="CountryName">Utca, Házszám</label>
+                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" Kederföldi utca 12." size="68">
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-12 pb-3">
+                                    <label for="CountryName">Telefonszám</label>
+                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" 06 30 122 5478" size="68">
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-12 pb-3">
+                                    <label for="CountryName">E-mail cim</label>
+                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" gipsz.jakab@gmail.com" size="68">
+                                </div>
+                            </li>
+                            <li class="row">
+                                    <fieldset class="col-12 pb-5">
+                                        <div>
+                                          <input type="checkbox" id="scales" name="scales"/>
+                                          <label for="scales" id="ASZF">Elolvastam és elfogadom a fehasználási feltételeket</label>
+                                        </div>
+                                        <div>
+                                          <input type="checkbox" id="horns" name="horns" />
+                                          <label for="horns" id="ASZF">Szeretnék nekem ajánlott hirdetéseket kapni a BringaBirodalom-tól </label>
+                                        </div>
+                                    </fieldset>
+                            </li>
+                        </ul>
                     </div>
-                </li>
-                <li class="row pt-3">
-                    <div class="col-12 pb-3">
-                        <input type="text" name="CountryName" id="CountryInput" placeholder=" Gipsz Jakab János" size="40">
-                        <label for="CountryName">kártyátn szereplő név</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card CardMy">
+                    <div class="row  ps-3 pe-3">
+                        <ul class="col-6 CardData ">
+                            <li class="row pt-3">
+                                <div class="col-12 pb-3">
+                                    <label for="CountryName">Bankkártya száma</label>
+                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" XXXX XXXX XXXX XXXX" size="45">
+                                </div>
+                            </li>
+                            <li class="row pt-3">
+                                <div class="col-12 pb-3">
+                                    <label for="CountryName">Kártyátn szereplő név</label>
+                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" Gipsz Jakab János" size="45">
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div id="Date" class="col-6">
+                                    <div>
+                                        <label for="Name">Lejárati dátum</label><br>
+                                        <input type="text" name="Name" id="NameInput" placeholder=" 09/29" >
+                                    </div>
+                                </div>
+                                <div id="CVC" class="col-6 pb-3">
+                                    <label for="Name">CVC/CVV kód</label><br>
+                                    <input type="text" name="Name" id="NameInput" placeholder=" 123" size="21">
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </li>
-                <li class="row">
-                    <div class="col-6">
-                        <label for="Name">Irányítószám</label>
-                        <input type="text" name="Name" id="NameInput" placeholder=" 9200" >
-                    </div>
-                    <div class="col-6 pb-3">
-                        <label for="Name">Település</label>
-                        <input type="text" name="Name" id="NameInput" placeholder=" Győr" size="21">
-                    </div>
-                </li>
-                
-                </ul>
+                </div>
             </div>
         </div>
     </div>

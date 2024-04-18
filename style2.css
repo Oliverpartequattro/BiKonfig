@@ -46,5 +46,13 @@
   text-align: left;
 }
 .CardData{
-  text-align: right;
+  text-align: left;
+}
+.CardMy{
+    margin-left: 0;
+    max-width: none;
+}
+#ASZF{
+    font-size: small;
+    display: contents;
 }
