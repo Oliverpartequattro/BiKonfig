@@ -3,8 +3,11 @@
     color: rgb(255, 109, 109);
 }
 .cartItems div img{
-    height: 200px;
-    width: 200px;
+    /* height: 200px;
+    width: 200px; */
+}
+.payPic{
+    height: 100px;
 }
 .aboutBicicle{
     padding-left: 20px;
@@ -29,4 +32,13 @@
     border-radius: 20px;
     padding: 15px;
     margin-bottom: 20px;
+}
+#BuyButtonDiv{
+    height: 90px;
+}
+#BuyButton{
+    height: 60px;
+    width: 250px;
+    font-size: x-large;
+    font-weight: 100;
 }

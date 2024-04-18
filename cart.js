@@ -50,7 +50,7 @@ function BucketAll() {
             <div class="card-body row p-5">
             <hr class="pb-3">
             <div class="Bimg col-4">
-              <img class="" src="${element.path}" alt="">
+              <img class="w-75" src="${element.path}" alt="">
             </div>
                 <ul class="col-8">
                   <li class="row">
@@ -92,6 +92,7 @@ function BucketAll() {
                     <div class="col-5">
                       <ul class="aboutBicicle">
                         <li class="priceli2">Részösszge: ${element.price.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' })}<span></span></li>
+                        <li><p>Biztosításösszege: <span id="InsuranceFee">0,00 Ft</span></p></li>
                         <li><p>Szállításösszeg: <span>Ingyenes</span></p></li>
                       </ul>
                     </div>
@@ -111,6 +112,7 @@ function BucketAll() {
           let BuyButton = document.createElement('button')
           BuyButton.classList.add('btn')
           BuyButton.classList.add('toCart')
+          BuyButton.id = "BuyButton"
           BuyButton.innerHTML = "Vásárlás"
 
           let sumPrice = document.createElement('div')
@@ -125,8 +127,13 @@ function BucketAll() {
               </div>
               <hr>
             </li>
-            <div class = "card-body">
+            <div id="BuyButtonDiv" class = "card-body">
               ${BuyButton.outerHTML}
+            </div>
+            <div class="">
+              <div class="">
+                <img class="payPic" src="images/mindenpay.jpg" alt="">
+              </div>
             </div>
             </div>`
           CartItems.appendChild(sumPrice);
@@ -143,13 +150,19 @@ function BucketAll() {
           removeFromCartByIndex(id)
         }
         else if(event.target.id.includes('insuranceProduct')){
+          let cost = 50000;
           let data = document.getElementById(`SumMoney`)
-          console.log(data);
-          console.log(data.classList.value);
-          let newPrice = Number(data.classList.value) + 50000
-          data.innerHTML = `${newPrice.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' })}`
-          data.classList = ""
-          data.classList.add(newPrice) 
+          let InsuranceFee = document.getElementById(`InsuranceFee`)
+          if (InsuranceFee.innerHTML.length < 10) {
+            InsuranceFee.innerHTML = `${cost.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' })}` 
+            let newPrice = Number(data.classList.value) + cost
+            data.innerHTML = `${newPrice.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' })}`
+            data.classList = ""
+            data.classList.add(newPrice) 
+          }
+          else{
+            alert("Már van biztosítás ezen a bicikliden! ")
+          }
         }
       });
 
