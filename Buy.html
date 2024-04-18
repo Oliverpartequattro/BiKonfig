@@ -22,7 +22,7 @@
     <div id="BuyContainer" class="container mt-5">
         <div class="row">
             <div class="col-6">
-                <div class="card CardMy">
+                <div class="card CardMy p-2">
                     <div class="row  ps-3 pe-3">
                         <ul class="col-12 BuyData">
                             <li class="row pt-3">
@@ -37,14 +37,14 @@
                             </li>
                             <li class="row">
                                 <div class="col-12 pb-3">
-                                    <label for="CompanyName">Cégnév (Nem kötelező)</label>
-                                    <input type="text" name="CompanyName" id="CompanyInput" placeholder=" Audi Hungaria.inc" size="68">
+                                    <label for="CompanyName">Cégnév (Nem kötelező)</label><br>
+                                    <input type="text" name="CompanyName" id="CompanyInput" placeholder=" Audi Hungaria.inc" size="73">
                                 </div>
                             </li>
                             <li class="row">
                                 <div class="col-12 pb-3">
-                                    <label for="CountryName">Ország</label>
-                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" Magyarország" size="68">
+                                    <label for="CountryName">Ország</label><br>
+                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" Magyarország" size="73">
                                 </div>
                             </li>
                             <li class="row">
@@ -59,64 +59,86 @@
                             </li>
                             <li class="row">
                                 <div class="col-12 pb-3">
-                                    <label for="CountryName">Utca, Házszám</label>
-                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" Kederföldi utca 12." size="68">
+                                    <label for="CountryName">Utca, Házszám</label><br>
+                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" Kederföldi utca 12." size="73">
                                 </div>
                             </li>
                             <li class="row">
                                 <div class="col-12 pb-3">
-                                    <label for="CountryName">Telefonszám</label>
-                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" 06 30 122 5478" size="68">
+                                    <label for="CountryName">Telefonszám</label><br>
+                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" 06 30 122 5478" size="73">
                                 </div>
                             </li>
                             <li class="row">
                                 <div class="col-12 pb-3">
-                                    <label for="CountryName">E-mail cim</label>
-                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" gipsz.jakab@gmail.com" size="68">
+                                    <label for="CountryName">E-mail cim</label><br>
+                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" gipsz.jakab@gmail.com" size="73">
                                 </div>
                             </li>
                             <li class="row">
-                                    <fieldset class="col-12 pb-5">
-                                        <div>
-                                          <input type="checkbox" id="scales" name="scales"/>
-                                          <label for="scales" id="ASZF">Elolvastam és elfogadom a fehasználási feltételeket</label>
-                                        </div>
-                                        <div>
-                                          <input type="checkbox" id="horns" name="horns" />
-                                          <label for="horns" id="ASZF">Szeretnék nekem ajánlott hirdetéseket kapni a BringaBirodalom-tól </label>
-                                        </div>
-                                    </fieldset>
+                                <fieldset class="col-12 pb-5">
+                                    <div>
+                                      <input type="checkbox" id="scales" name="scales"/>
+                                      <label for="scales" id="ASZF">Elolvastam és elfogadom a fehasználási feltételeket</label>
+                                    </div>
+                                    <div>
+                                      <input type="checkbox" id="horns" name="horns" />
+                                      <label for="horns" id="ASZF">Szeretnék nekem ajánlott hirdetéseket kapni a BringaBirodalom-tól </label>
+                                    </div>
+                                </fieldset>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-6">
-                <div class="card CardMy">
-                    <div class="row  ps-3 pe-3">
-                        <ul class="col-6 CardData ">
+                <div class="card CardMy2 p-3">
+                    <div class="row  ps-3 pe-3 mx-auto">
+                        <ul class="col-12 CardData ">
                             <li class="row pt-3">
                                 <div class="col-12 pb-3">
-                                    <label for="CountryName">Bankkártya száma</label>
-                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" XXXX XXXX XXXX XXXX" size="45">
+                                    <label for="CountryName">Bankkártya száma</label><br>
+                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" XXXX XXXX XXXX XXXX" size="67">
                                 </div>
                             </li>
                             <li class="row pt-3">
-                                <div class="col-12 pb-3">
-                                    <label for="CountryName">Kártyátn szereplő név</label>
-                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" Gipsz Jakab János" size="45">
+                                <div class="col-12 pb-4">
+                                    <label for="CountryName">Kártyátn szereplő név</label><br>
+                                    <input type="text" name="CountryName" id="CountryInput" placeholder=" Gipsz Jakab János" size="67">
                                 </div>
                             </li>
                             <li class="row">
                                 <div id="Date" class="col-6">
                                     <div>
                                         <label for="Name">Lejárati dátum</label><br>
-                                        <input type="text" name="Name" id="NameInput" placeholder=" 09/29" >
+                                        <input type="text" name="Name" id="NameInput" placeholder=" 09/29" size="28" >
                                     </div>
                                 </div>
-                                <div id="CVC" class="col-6 pb-3">
+                                <div id="CVC" class="col-6 pb-4">
                                     <label for="Name">CVC/CVV kód</label><br>
-                                    <input type="text" name="Name" id="NameInput" placeholder=" 123" size="21">
+                                    <input type="text" name="Name" id="NameInput" placeholder=" 123" size="28">
+                                </div>
+                            </li>
+                            <li class="row">
+                                
+                            </li>
+                            <li class="row">
+                                <fieldset class="col-12 pb-3">
+                                    <div>
+                                        <input type="checkbox" id="scales" name="scales"/>
+                                        <label for="scales" id="ASZF">Elolvastam és elfogadom a fehasználási feltételeket</label>
+                                    </div>
+                                </fieldset>
+                            </li>
+                            <li class="row">
+                                <div class="col-11 LogoPic">
+                                    <h4 class="jaa">Köszönjük a vásárlást!</h4>
+                                    <img class="w-25" src="images/BBLOGO.PNG" alt="">
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="col-12 PayButtonDiv">
+                                    <button id="PayButton" class="btn toCart">Fizetés</button> 
                                 </div>
                             </li>
                         </ul>
@@ -125,7 +147,13 @@
             </div>
         </div>
     </div>
-
+    <footer class="footer">
+        <div class="footer_content">
+            <p class="zoom"> <span class="glow"> BringaBirodalom Zrt. </span></p>
+            <p class="zoom"> --- <span class="glow"> Elő </span> Zalán ---</p>
+            <p class="zoom"> --- <span class="glow"> Roncz </span> Olivér ---</p>
+        </div>
+      </footer>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

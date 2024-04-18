@@ -2,9 +2,13 @@
     margin-top: 20px;
     color: rgb(255, 109, 109);
 }
-.cartItems div img{
-    /* height: 200px;
-    width: 200px; */
+.cartItems{
+    margin-left: 0;
+    max-width: none;
+}
+.BuyItem{
+    margin-left: 0;
+    max-width: none;
 }
 .payPic{
     height: 100px;
@@ -52,7 +56,33 @@
     margin-left: 0;
     max-width: none;
 }
+.CardMy2{
+    margin-left: 20px;
+    max-width: none;
+    background-color: rgba(224, 60, 49, 1);
+}
+
 #ASZF{
     font-size: small;
     display: contents;
+}
+#PayButton{
+    width: 100%;
+    background-color: rgb(81, 142, 255);
+}
+.LogoPic{
+    background-color: white;
+    text-align: right;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.PayButtonDiv{
+    height: 110px;
+}
+.jaa{
+    padding-top: 45px;
+    float: left;
 }

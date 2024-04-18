@@ -46,7 +46,7 @@ function BucketAll() {
             let CartItem = document.createElement('div')
             CartItem.id = `cart${i}`
             CartItem.innerHTML = `
-            <div class="cartItems card">
+            <div class="card cartItems">
             <div class="card-body row p-5">
             <hr class="pb-3">
             <div class="Bimg col-4">
@@ -118,7 +118,7 @@ function BucketAll() {
           let sumPrice = document.createElement('div')
           sumPrice.classList.add('cartItems')
           sumPrice.innerHTML = `
-            <div class="card ps-5 pe-5">
+            <div class="card BuyItem ps-5 pe-5">
             <hr>
             <li class="row">
               <div class="col-7"></div>
