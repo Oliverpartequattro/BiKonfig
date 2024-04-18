@@ -5,15 +5,7 @@ let cart = []
 let data
 cart = JSON.parse(localStorage.getItem('cart'));
 
-// if (cart.length != 0) {
-//     for (let i = 1; i < 10; i++) {
-//         data = document.createElement('option');
-//         data.innerText = `${i}`;
-//         data.value = i
-//         // AmountBoughtElement.appendChild(data);
-        
-//     }
-// }
+
 BucketAll()
 function BucketAll() {
     
@@ -26,12 +18,7 @@ function BucketAll() {
         let sum = 0
 
         cart.forEach(element => {
-            // dotnum = element.price.length % 3
-            // dottedprice = String(element.price)
-            // for (let i = 0; i < dotnum; i++) {
-            //     const element = array[i];
-                
-            // }
+            
             
             let DeletButton = document.createElement('button')
             DeletButton.classList.add('CartDeletProduct')
@@ -143,8 +130,6 @@ function BucketAll() {
         console.log(event)
         if (event.target.id.includes('deletProduct')) {
           let id = event.target.id.slice(12)
-          console.log(Number(id));
-          console.log(`cart${id}`);
           elementRemove = document.getElementById(`cart${id}`)
           CartItems.removeChild(elementRemove)
           removeFromCartByIndex(id)
@@ -176,4 +161,4 @@ function BucketAll() {
         } else {
             alert("Invalid index!");
         }
-    }
+      }
