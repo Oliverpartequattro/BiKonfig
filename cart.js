@@ -84,7 +84,7 @@ function BucketAll() {
                     <div class="col-5">
                       <ul class="aboutBicicle">
                         <li class="priceli2">Részösszge: ${element.price.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' })}<span></span></li>
-                        <li><p>Biztosításösszege: <span id="InsuranceFee">0,00 Ft</span></p></li>
+                        <li><p>Biztosításösszege: <span id="InsuranceFee${i}">0,00 Ft</span></p></li>
                         <li><p>Szállításösszeg: <span>Ingyenes</span></p></li>
                       </ul>
                     </div>
@@ -143,7 +143,11 @@ function BucketAll() {
         else if(event.target.id.includes('insuranceProduct')){
           let cost = 50000;
           let data = document.getElementById(`SumMoney`)
-          let InsuranceFee = document.getElementById(`InsuranceFee`)
+          let id = event.target.id.slice(16)
+
+          let InsuranceFee = document.getElementById(`InsuranceFee${id}`)
+
+
           if (InsuranceFee.innerHTML.length < 10) {
             InsuranceFee.innerHTML = `${cost.toLocaleString('hu-HU', { style: 'currency', currency: 'HUF' })}` 
             let newPrice = Number(data.classList.value) + cost
