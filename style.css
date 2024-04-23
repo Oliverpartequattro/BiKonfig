@@ -220,3 +220,8 @@ body{
 .spinTheBike{
     animation: spin 2s linear infinite;
 }
+
+/* Én voltam  Zalán */
+.configHeight{
+    height: 880px;
+}

@@ -9,15 +9,17 @@ BucketAll()
 function BucketAll() {
     
     console.log(cart)
-    if(cart.length == 0){
+    if(cart.length < 1){
       let ImgDiv = document.createElement('div')
       let Img = document.createElement('img')
       Img.src = "images/BBLOGO.PNG"
+      ImgDiv.classList.add("ImgDivHeight")
       ImgDiv.classList.add("EmptyCart")
       let Empty = document.createElement('div')
       Empty.innerHTML = `A kosara üres.`
       Empty.classList = 'EmptyCart'
       Empty.classList.add("pb-5")
+      Empty.classList.add("pt-5")
       CartItems.appendChild(Empty)
       ImgDiv.appendChild(Img)
       CartItems.appendChild(ImgDiv)
