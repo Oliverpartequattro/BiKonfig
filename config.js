@@ -113,7 +113,7 @@ function buildBike() {
 
 
 function configItemToCart() {
-    let customBike = new Bike(`Cipollini NK1K;2008;${buildPrice};uj;asdasd;images/cipolliniNK1K.jpg;50`)
+    let customBike = new Bike(`BringaBirodalom egyedi konfiguráció;2008;${buildPrice};uj;asdasd;images/BBLOGO.png;50`)
     console.log(customBike)
     addToCartFunction([customBike]);
 
