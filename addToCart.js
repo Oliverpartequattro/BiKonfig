@@ -17,9 +17,9 @@ export function addToCartFunction(bikesData) {
             if(element.id == button.value){
                 if(cart.some(item => item.id === element.id)){
                     alert("Ez már benne van a kosárban!")
-                    cart = []
-                    localStorage.setItem('cart', JSON.stringify(cart)); 
-                    updateCartCount() //EZ KIURITI
+                    // cart = []
+                    // localStorage.setItem('cart', JSON.stringify(cart)); 
+                    // updateCartCount() //EZ KIURITI
                     location.reload()
                 }
                 else{
